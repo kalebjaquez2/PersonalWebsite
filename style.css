@@ -28,7 +28,29 @@
 }
 
 
+
+
+
 /*For containers Projects Page*/
+
+
+/* Video styling - mirrors image styling */
+.image-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* If video is inside a link */
+.image-box a video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
 
 
 .container {
@@ -233,4 +255,5 @@ nav li:first-child{
     .sidebar{
         width: 100%;
     }
+
 }
