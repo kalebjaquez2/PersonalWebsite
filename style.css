@@ -34,22 +34,54 @@
 /*For containers Projects Page*/
 
 
-/* Video styling - mirrors image styling */
+/* Video styling - use contain instead of cover to show full video */
 .image-box video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain */
     border-radius: 15px;
+    background-color: #000; /* Black background for letterboxing */
 }
 
-/* If video is inside a link */
 .image-box a video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 15px;
 }
 
+/* Make video containers taller and more flexible */
+.video-container {
+    width: 100%;
+    max-height: none; /* Remove height constraint */
+    min-height: 400px; /* Minimum height */
+    border-radius: 15px;
+    overflow: visible; /* Changed from hidden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+    padding-bottom: 10px; /* Space for link */
+}
+
+.video-container video {
+    width: 100%;
+    height: 400px; /* Fixed height for video */
+    object-fit: contain;
+    border-radius: 15px 15px 0 0;
+    background-color: #000;
+}
+
+.video-container .github-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.video-container .github-link:hover {
+    color: #0066cc;
+}
 
 
 
@@ -257,3 +289,4 @@ nav li:first-child{
     }
 
 }
+
